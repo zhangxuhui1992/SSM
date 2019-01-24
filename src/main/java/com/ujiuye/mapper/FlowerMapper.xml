@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- namespace:命名空间，一个接口的名称 -->
+<mapper namespace="com.ujiuye.mapper.FlowerMapper">
+	<select id="show" resultType="com.ujiuye.bean.Flower">
+		select * from flower;
+	</select>
+	
+	<insert id="insOne" parameterType="com.ujiuye.bean.Flower" >
+		insert into flower values (default,'${name}',${price},'${production}');
+	</insert>
+</mapper>
